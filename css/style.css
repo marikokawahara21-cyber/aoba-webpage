@@ -1,0 +1,703 @@
+/* 📖 目次（Ctrl+F でこの中の言葉を検索するとジャンプできます）
+   --------------------------------------------------------------
+   [1]  全体・ベース設定
+   [2]  ヘッダー
+   [3]  ナビゲーション（PC）
+   [4]  フッター
+   [5]  TOP- ヒーロー領域
+   [6]  Aboutセクション
+   [7]  Serviceセクション
+   [8]  PC用：Service 2列レイアウト
+   [9]  ★スマホ用CSS（768px以下）★ ← ハンバーガーメニューはここ
+  
+   -------------------------------------------------------------- */
+
+/* ==========================================
+   全体・ベース設定
+   ========================================== */
+html {
+  font-family: "M Plus 1", sans-serif;
+  font-size: 16px;
+  color: #1a1a1a;
+  overflow-x: hidden;
+  background-color: #f8f8f8;
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}
+
+main {
+  text-align: center;
+  padding: 0;
+  background-color: transparent;
+}
+
+/* ==========================================
+   ヘッダー
+   ========================================== */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: #c9b896;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+/* ==========================================
+   ナビゲーション（PC）
+   ========================================== */
+nav {
+  position: static;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  padding: 0;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1a1a1a !important;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00a5a8;
+}
+
+/* ==========================================
+   フッター
+   ========================================== */
+footer {
+  background-color: #c9b896;
+  color: #f8f8f8;
+  text-align: center;
+  padding: 20px 5%;
+}
+
+.footer-copy {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* ==========================================
+   TOPページ - ヒーロー領域
+   ========================================== */
+
+#top-main {
+  margin: 20px 0;
+  padding-top: 100px; /* ← ヘッダーの高さ分だけ追加 */
+}
+h1 {
+  font-size: 40px;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 5% 30px 5%;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  padding: 10px 0 30px 0;
+}
+
+.profile {
+  width: 400px;
+  height: auto;
+}
+
+.hero-sub {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+  margin: 5px 0 0 0;
+  max-width: 600px;
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================
+   Aboutページ
+   ========================================== */
+.About {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 5%;
+  background-color: #f8f8f8;
+  text-align: left;
+}
+.about-hero {
+}
+
+.about-hero h1.hero-catch {
+  color: #666666;
+  background-color:;
+}
+
+.About h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 60px 0 30px 0;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #00a5a8;
+  padding-bottom: 15px;
+}
+
+.About h3:first-of-type {
+  margin-top: 40px;
+}
+
+.About p {
+  font-size: 16px;
+  color: #1a1a1a;
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.About p:nth-of-type(2) {
+  color: #666666;
+  font-size: 15px;
+}
+
+.About p.closing {
+  margin-top: 40px;
+  padding: 30px 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.career-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 50px 0;
+  text-align: left;
+}
+
+.career-list li {
+  font-size: 16px;
+  color: #1a1a1a;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.career-list li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #00a5a8;
+  font-size: 12px;
+}
+.hero-catch {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+.about-body p.why-do {
+  margin-top: 32px;
+  font-size: 17px;
+  color: #00a5a8;
+  line-height: 1.9;
+  text-decoration: wavy;
+}
+
+.about-closing .closing {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #666666;
+}
+.about-closing .highlight {
+  display: block;
+  font-size: 17px;
+  color: #00a5a8;
+  font-weight: 700;
+  margin-top: 12px;
+}
+.about-closing .closing-question {
+  margin-top: 32px;
+  font-size: 14px;
+  color: #999999;
+  line-height: 1.9;
+}
+
+/* ==========================================
+   Serviceページ
+   ========================================== */
+#service {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 5%;
+  background-color: #f8f8f8;
+  text-align: left;
+}
+
+#service h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 60px 0;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+#service h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 60px 0 30px 0;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #00a5a8;
+  padding-bottom: 15px;
+}
+
+#service h3:first-of-type {
+  margin-top: 0;
+}
+
+#service h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 15px 0;
+  letter-spacing: 0.05em;
+}
+
+#service p {
+  font-size: 16px;
+  color: #1a1a1a;
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+#service p.note {
+  font-size: 14px;
+  color: #666666;
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-left: 4px solid #00a5a8;
+  margin-bottom: 30px;
+}
+/* ==========================================
+   Workページ
+   ========================================== */
+
+#works {
+  background-color: #f0f0f0;
+}
+.sample {
+  display: flex;
+  /* 画像と説明文を上揃えにする */
+  align-items: center;
+  gap: 20px;
+  /*  横に並んだ要素 */
+  padding: 24px;
+}
+.card-left {
+  display: flex;
+  flex-direction: column;
+}
+.card-description {
+  flex: 1;
+}
+
+/* .sample-image1  */
+.service-introduction {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.service-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sample-img1 {
+  width: 300px;
+  height: 300px;
+}
+.sample-img2 {
+  width: 300px;
+  height: auto;
+}
+
+.work-img {
+  max-width: 320px;
+  height: 220;
+  object-fit: cover;
+}
+
+.flow-list {
+  list-style: decimal;
+  padding-left: 30px;
+  margin: 0 0 40px 0;
+}
+
+.flow-list li {
+  font-size: 16px;
+  color: #1a1a1a;
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.recommend-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 50px 0;
+}
+
+.recommend-list li {
+  font-size: 16px;
+  color: #1a1a1a;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.recommend-list li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #00a5a8;
+  font-size: 12px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 30px auto 0;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-family: "M Plus 1", sans-serif;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #00a5a8;
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #00a5a8;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #008a8d;
+}
+
+.thanks {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 80px 5% 60px 5%;
+  text-align: center;
+}
+.thanks a {
+  display: inline-block;
+  margin-top: 40px;
+  color: #00a5a8;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.thanks a:hover {
+  color: #008a8d;
+}
+
+/* ==========================================
+   スマホ用CSS（768px以下）
+   ========================================== */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 34px;
+  }
+  /* ハンバーガーボタン */
+  #hmb {
+    width: 32px;
+    height: 27px;
+    cursor: pointer;
+    position: relative;
+    z-index: 30;
+    display: block;
+  }
+
+  #hmb span {
+    width: 32px;
+    height: 3px;
+    display: block;
+    background-color: #000;
+    border-radius: 2px;
+    position: absolute;
+    transition: 0.3s;
+  }
+
+  #hmb span:first-child {
+    top: 0;
+  }
+
+  #hmb span:nth-child(2) {
+    top: 12px;
+  }
+
+  #hmb span:last-child {
+    top: 24px;
+  }
+
+  /* ヘッダー調整 */
+  #header {
+    height: 40px;
+  }
+
+  #header.active {
+    background-color: #a2d6d4;
+  }
+
+  /* ドロワーナビゲーション */
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: #f3e8d3;
+    display: flex;
+    align-items: flex-start;
+    padding: 100px 20px 20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: all 0.5s;
+    z-index: 20;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 20px 0;
+    background-color: #2b303a;
+    color: #fff !important;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  #header.active nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  /* ハンバーガーボタンアニメーション */
+  #header.active #hmb span:first-child {
+    top: 12px;
+    transform: rotate(45deg);
+  }
+
+  #header.active #hmb span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #header.active #hmb span:last-child {
+    top: 12px;
+    transform: rotate(-45deg);
+  }
+
+  /* 背景の暗転 */
+  #header.active::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 10;
+  }
+
+  /* TOPページ */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /*  min-heightvhでvhを使うと、画面の高さの何パーセント以上の高さを保つという意味 */
+    padding: 40px 5% 10px 5%;
+  }
+  .hero-image {
+    width: 100;
+    height: auto;
+  }
+  .hero h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .hero-sub {
+    font-size: 14px;
+  }
+  .about-body p .why-do {
+    font-size: 10px;
+  }
+
+  /* Aboutページ */
+  .About {
+    padding: 5px 5% 20px 5%;
+  }
+
+  .About h3 {
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .About h3:first-of-type {
+    margin-top: 30px;
+  }
+
+  .About p {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .career-list li {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  /* Serviceページ */
+
+  .sample {
+    flex-direction: column;
+  }
+  #main-service {
+    padding: 60px 5%;
+  }
+
+  #main-service h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  #main-service h3 {
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  #main-service h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  #main-service p {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .main-service-item {
+    padding: 30px;
+    margin-bottom: 24px;
+  }
+
+  .flow-list li {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+
+  .recommend-list li {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+}
